@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Nguyen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-container">
+        <img class="top-cloud" src="{{ url_for('static', filename='images/cloud.png') }}" alt="cloud-image">
+        <h1>I'm Ben.</h1>
+        <p>A <span class="wannabe">wannabe</span> DevOps Engineer.</p>
+        <img class="bottom-cloud"src="{{ url_for('static', filename='images/cloud.png') }}" alt="cloud-image">
+        <img src="{{ url_for('static', filename='images/mountain.png') }} " alt="mountain-image">
+    </div>
+    <div class="middle-container">
+        <div class="profile">
+          <img class="profile-picture" src="{{ url_for('static', filename='images/Ben.png') }}" alt="Ben-image">
+          <h2>Hello</h2>
+          <p>I am actively seeking new opportunities to transition from Software QA Engineering to DevOps/Cloud Engineering.
+            I am committed to learning the latest technologies relevant to this role and am eager to connect with like-minded
+            professionals in the field.</p>
+        </div>
+        <hr>
+        <div class="skills">
+          <h2>My Skills & Education</h2>
+          <div class="skill-row">
+            <img class="" src="" alt="">
+            <h3>Technical Skills</h3>
+            <div class="skills-section">
+                <div class="skills-title">Operating Systems:</div> 
+                <p class="skills-description">VMware vSphere (ESXi, VCSA), Linux (RHEL, SUSE, CentOS, Ubuntu), MacOS, Windows</p>
+            </div>
+            <div class="skills-section">
+                <div class="skills-title">Containerization Tools:</div>
+                <p class="skills-description">Docker, Podman, Kubernetes (Beginner: Deployment, Scaling, Services, Troubleshooting)</p>
+            </div>
+            <div class="skills-section">
+                <div class="skills-title">Cloud Technology:</div>
+                <p class="skills-description">AWS (Beginner: EC2, S3, IAM)</p>
+            </div>
+            <div class="skills-section">
+                <div class="skills-title">Programming Languages:</div> 
+                <p class="skills-description">Python, C++ (Intermediate), Bash (Beginner)<p>
+            </div>
+            <div class="skills-section">
+                <div class="skills-title">Automation Tools:</div>
+                <p class="skills-description">Jenkins, MongoDB, MySQL, JupterLab, Ansible, Terraform (Beginner: AWS Provisioning)</p>
+            </div>
+            <div class="skills-section">
+                <div class="skills-title">Bug Tracking Tools:</div> 
+                <p class="skills-description">JIRA, ClearQuest, ServiceNow, Confluence</p>
+            </div>
+            <div class="skills-section">
+                <div class="skills-title">Source Control Management:</div> 
+                <p class="skills-description">BitBucket, Gitlab, GitHub, Perforce, Git</p>
+            </div>
+            <div class="skills-section">
+                <div class="skills-title">Application Monitoring Tools:</div> 
+                <p class="skills-description">Grafana (Beginner), Prometheus (Beginner)</p>
+            </div>
+            <h3>Soft Skills</h3>
+            <div class="skills-section">Teamwork, Communication, Problem-Solving, Adaptability, Time Management, Critical Thinking, Work Ethic,
+              Interpersonal Skills, Attention to Detail, Conflict Resolution, Collaboration, Leadership, Emotional Intelligence</div>
+          </div>
+          <div class="education-row">
+            <img class="" src="" alt="">
+            <h3>Education</h3>
+            <p>Bachelor of Science in Computer Engineering (Cum Laude, GPA 3.6), Wichita State Universiy, Wichita KS.</p>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div class="bottom-container">
+      <h2>Get In Touch</h2>
+      <a class="footer-link" href="https://github.com/BenZhen14">GitHub</a>
+      <a class="footer-link" href="https://www.linkedin.com/in/ben-qn-nguyen/">LinkedIn</a>
+    </div>
+</body>
+</html>
