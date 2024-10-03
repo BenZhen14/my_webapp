@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 # Update yum and install Docker
 sudo yum update -y
 sudo yum install -y yum-utils

@@ -4,7 +4,7 @@ resource "aws_instance" "web_app" {
   instance_type          = var.instance_type
   key_name               = aws_key_pair.public_key.id
   vpc_security_group_ids = [aws_security_group.web_app_sg.id]
-  user_data              = file("scripts/install_web_app.sh")
+  user_data              = file("./scripts/install_web_app.sh")
   tags = {
     Name        = "web_app"
     Description = "My Web Application"
@@ -16,7 +16,7 @@ resource "aws_instance" "jenkins_server" {
   instance_type          = var.instance_type
   key_name               = aws_key_pair.public_key.id
   vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
-  user_data              = file("scripts/install_jenkins.sh")
+  user_data              = file("./scripts/install_jenkins.sh")
   tags = {
     Name        = "jenkins_server"
     Description = "Jenkins Instance"
@@ -28,7 +28,7 @@ resource "aws_instance" "prometheus_server" {
   instance_type          = var.instance_type
   key_name               = aws_key_pair.public_key.id
   vpc_security_group_ids = [aws_security_group.prometheus_sg.id]
-  user_data              = file("scripts/install_prometheus.sh")
+  user_data              = file("./scripts/install_prometheus.sh")
   tags = {
     Name        = "prometheus_server"
     Description = "Prometheus Instance"
@@ -40,7 +40,7 @@ resource "aws_instance" "grafana_server" {
   instance_type          = var.instance_type
   key_name               = aws_key_pair.public_key.id
   vpc_security_group_ids = [aws_security_group.grafana_sg.id]
-  user_data              = file("scripts/install_grafana.sh")
+  user_data              = file("./scripts/install_grafana.sh")
   tags = {
     Name        = "grafana_server"
     Description = "Grafana Instance"
