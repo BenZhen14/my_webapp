@@ -17,7 +17,7 @@ variable "rsa_bits" {
   default = 4096
 }
 variable "filename" {
-  default = "tf_priv_key"
+  default = "tf_priv_key.pem"
 }
 variable "byte_length" {
   default = 8

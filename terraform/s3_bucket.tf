@@ -1,6 +1,6 @@
 # Create S3 bucket for Jenkins artifacts
-resource "aws_s3_bucket" "jenkins_artifacts" {
-  bucket = "jenkins_artifacts-${random_id.randomness.hex}"
+resource "aws_s3_bucket" "jenkins-artifacts" {
+  bucket = "jenkins-artifacts-${random_id.randomness.hex}"
   tags = {
     Name = "jenkins_artifacts"
   }
