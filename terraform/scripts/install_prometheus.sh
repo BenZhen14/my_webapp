@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install dependencies
-sudo yum update -y
-sudo yum install -y wget tar
+sudo apt update -y
+sudo apt install -y wget tar
 
 # Create Prometheus user, directories, and set permissions
 sudo useradd --no-create-home --shell /bin/false prometheus

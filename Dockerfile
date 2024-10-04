@@ -1,5 +1,7 @@
 # Use an official Python runtime image
-FROM python:3-slim
+# Since I tested on an M1 (ARM) Mac, there are issues wth CPU architectures
+# I am explicitly defining the AMD64 here
+FROM --platform=linux/amd64 python:3-slim
 
 # Set the working directory in the container to /web_app
 WORKDIR /web_app
