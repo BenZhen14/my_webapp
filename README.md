@@ -1,5 +1,5 @@
 # My Personal Flask Web Application
-This repository is a demonstration of my DevOps skills, showcasing the automation of infrastructure setup and deployment for a simple web application using Docker, Terraform, AWS, Jenkins, Prometheus, and Grafana.
+This repository is a demonstration of my DevOps skills, showcasing the automation of infrastructure setup and deployment for a simple web application using Docker, Terraform, AWS, Jenkins, Prometheus, Grafana, and Caddy.
 
 **Note: This project is not intended for reuse in production environments or deployment. The focus is on demonstrating infrastructure automation rather than providing a fully functional application for others to use.**
 
@@ -7,6 +7,7 @@ This repository is a demonstration of my DevOps skills, showcasing the automatio
 ```
 web_app/
 ├── Dockerfile
+├── README.md
 ├── app
 │   ├── app.py
 │   ├── static
@@ -23,6 +24,7 @@ web_app/
 └── terraform
     ├── key_pair.tf
     ├── main.tf
+    ├── outputs.tf
     ├── provider.tf
     ├── s3_bucket.tf
     ├── scripts
@@ -46,7 +48,7 @@ This Terraform project provisions the following infrastructure on AWS:
 ### Security Groups
 Each EC2 instance has its own security group, allowing access over specific ports:
 
-- **Web App**: SSH (22), HTTP (80)
+- **Web App**: SSH (22), HTTP (80), HTTPS (443), Prometheus (9323)
 - **Jenkins**: SSH (22), HTTP (8080)
 - **Grafana**: SSH (22), HTTP (3000)
 - **Prometheus**: SSH (22), HTTP (9090)
@@ -60,3 +62,5 @@ An S3 bucket is created to store Jenkins artifacts.
 - **Jenkins**: CI/CD server to automate the build and deployment process.
 - **Prometheus**: Used for metrics collection and monitoring.
 - **Grafana**: Visualizes the metrics collected from Prometheus. (This is a WIP as I'm still learning).
+- **Caddy**: An automatic HTTPS server.
+- **Cloudflare**: Used for purchasing the domain name.

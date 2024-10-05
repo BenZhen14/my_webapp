@@ -19,7 +19,7 @@ sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
 sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
-sudo cp prometheus-2.54.1.linux-amd64/prometheus.yaml /etc/prometheus/prometheus.yml
+sudo cp prometheus-2.54.1.linux-amd64/prometheus.yml /etc/prometheus/prometheus.yml
 sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 sudo -u prometheus /usr/local/bin/prometheus \
     --config.file /etc/prometheus/prometheus.yml \

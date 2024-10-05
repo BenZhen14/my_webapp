@@ -30,15 +30,27 @@ hr{
     padding-top: 2.5px;
     padding-bottom: 25px;
 }
-.top-cloud {
-    position: absolute;
-    right: 550px;
-    top: 50px;
+/* Media query for Desktop */
+@media screen and (min-width: 768px){
+    .top-cloud {
+        position: absolute;
+        right: 550px;
+        top: 50px;
+    }
+    .bottom-cloud {
+        position: absolute;
+        bottom: 300px;
+        left: 500px;
+    }
 }
-.bottom-cloud {
-    bottom: 300px;
-    left: 500px;
-    position: absolute;
+/* Media query for Mobile */
+@media screen and (max-width: 600px) {
+    .top-cloud, .bottom-cloud {
+        width: 150px;
+    }
+    .mountain {
+        max-width: 300px;
+    }
 }
 .wannabe {
     text-decoration: underline;

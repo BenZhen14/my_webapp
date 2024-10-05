@@ -1,4 +1,11 @@
 #!/bin/bash
+# Install Caddy (HTTPS server)
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+sudo apt update -y
+sudo apt install caddy -y
+
 # Add Docker's official GPG key:
 sudo apt-get update -y
 sudo apt-get install ca-certificates curl -y
@@ -22,5 +29,5 @@ sudo systemctl enable docker
 sudo systemctl status docker
 
 # Pull docker image and run it
-docker pull docker.io/nguyb/web_app:latest
-docker run -d --name web_app -p 80:80 docker.io/nguyb/web_app:latest
+sudo docker pull docker.io/nguyb/web_app:latest
+sudo docker run -d --name web_app -p 8888:80 docker.io/nguyb/web_app:latest
