@@ -1,5 +1,5 @@
 # Use an official Python runtime image
-# Since I tested on an M1 (ARM) Mac, there are issues wth CPU architectures
+# Since I tested on an M1 (ARM) Mac, there are issues with CPU architectures
 # I am explicitly defining the AMD64 here
 FROM --platform=linux/amd64 python:3-slim
 
